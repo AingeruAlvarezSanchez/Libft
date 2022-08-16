@@ -3,7 +3,8 @@ NAME = libft.a
 ## COMPILING AND LINKING RELATED VARIABLES ##
 AR = ar rc
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra #-fsanitize=address -g3
+SANITIZE = -fsanitize=address -g3
 RM = rm -f
 #############################################
 
@@ -15,6 +16,10 @@ SRC =	ft_isalpha.c		\
 		ft_isascii.c		\
 		ft_isprint.c		\
 		ft_strlen.c			\
+		ft_memset.c			\
+		ft_bzero.c			\
+		ft_memcpy.c			\
+		ft_memmove.c		\
 
 OBJ = $(SRC:.c=.o)
 #############################################
@@ -37,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus .SILENT
