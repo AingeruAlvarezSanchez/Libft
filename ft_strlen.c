@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 19:00:30 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 20:25:49 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 23:30:48 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;

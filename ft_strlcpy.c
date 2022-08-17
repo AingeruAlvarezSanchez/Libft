@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 22:11:44 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 19:16:51 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 23:30:25 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
+	if (!src || !dst)
+		return (0);
 	i = -1;
 	if (dstsize != 0)
 	{
