@@ -3,7 +3,7 @@ NAME = libft.a
 ## COMPILING AND LINKING RELATED VARIABLES ##
 AR = ar rc
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra #-fsanitize=address -g3
+CFLAGS = -Wall -Werror -Wextra
 SANITIZE = -fsanitize=address -g3
 RM = rm -f
 #############################################
@@ -45,18 +45,35 @@ SRC =	ft_isalpha.c		\
 		ft_putendl_fd.c		\
 		ft_putnbr_fd.c		\
 
+SRC_BONUS = ft_lstnew.c			\
+			ft_lstadd_front.c	\
+			ft_lstsize.c		\
+			ft_lstlast.c		\
+			ft_lstadd_back.c	\
+			ft_lstdelone.c		\
+			ft_lstclear.c		\
+			ft_lstiter.c		\
+			ft_lstmap.c			\
+
 OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 #############################################
 
 .SILENT:
 
 all: $(NAME)
 
-$(NAME) : $(OBJ) $(INCLUDES)
+$(NAME): $(OBJ) $(INCLUDES)
 	$(AR) $(NAME) $(OBJ)
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $(SRC) $(SRC_BONUS)
+$(OBJ): $(SRC) 
+	$(CC) $(CFLAGS) -c $^
+
+bonus: $(OBJ_BONUS) $(INCLUDES)
+	$(AR) $(NAME) $^
+
+$(OBJ_BONUS): $(SRC) $(SRC_BONUS)
+	$(CC) $(CFLAGS) -c $^
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
