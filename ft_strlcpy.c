@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 22:11:44 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 00:26:05 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:16:51 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = -1;
-	//poner && para arreglar segfault
-	/*if (!src || !dst)
-		return (0);*/
 	if (dstsize != 0)
 	{
 		while (src[++i] && i < dstsize - 1)

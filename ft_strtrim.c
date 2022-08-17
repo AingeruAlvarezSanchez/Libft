@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 03:37:17 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 03:50:49 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:17:31 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*result;
 	int		i;
-	
+
 	if (!s1)
 		return (NULL);
 	if (!set)

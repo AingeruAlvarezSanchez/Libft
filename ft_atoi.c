@@ -6,15 +6,23 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 01:07:26 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 01:23:42 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:22:12 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief converts the string pointed by
+ * str to its integer representation.
+ * 
+ * @param str the string containing the integer to be represented.
+ * @return int the result of the representation of the string
+ * pointed by str.
+ */
 int	ft_atoi(const char *str)
 {
-	int result;
+	int	result;
 	int	i;
 	int	sign;
 

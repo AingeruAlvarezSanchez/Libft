@@ -6,13 +6,21 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 13:41:44 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 13:59:06 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 20:08:00 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * @brief calculates the size of the double string for allocation.
+ * 
+ * @param s the string to be splitted.
+ * @param c the splitting character.
+ * @return int the number of strings needed on the double string result
+ * (not counting the NULL string).
+ */
 static int	ft_doublesize(const char *s, char c)
 {
 	int		size;
@@ -27,6 +35,15 @@ static int	ft_doublesize(const char *s, char c)
 	return (size);
 }
 
+/**
+ * @brief takes the string pointed by s and creates a double
+ * array splitted by the character c (wich is eliminated).
+ * 
+ * @param s the string to split.
+ * @param c the splitting character.
+ * @return char** the resultant allocation of the splitted
+ * string pointed by s.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**result;

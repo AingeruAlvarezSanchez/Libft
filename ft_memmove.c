@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 21:07:55 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/16 21:10:58 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:16:26 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = -1;
-	//agregar && a la condicion justo debajo para segfault arreglo
 	if (dst || src)
 	{
 		if (dst > src)

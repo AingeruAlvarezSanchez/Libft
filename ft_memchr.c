@@ -6,12 +6,21 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 00:42:06 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 00:47:08 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 20:00:03 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief 
+ * 
+ * @param s locates the first occurrence of c 
+ * (converted to an unsigned char) in the string pointed by s.
+ * @param c the character to be located.
+ * @param n max bytes to search on the string pointed by s.
+ * @return void* the pointer to the byte located (or NULL if not found)
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

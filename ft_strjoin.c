@@ -6,13 +6,21 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 03:19:28 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 03:33:05 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/17 20:23:00 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * @brief concatenates the string pointed by s1 and the string pointed
+ * by s2 and allocates a new string based on the result of the concatenation.
+ * 
+ * @param s1 the first string to concatenate.
+ * @param s2 the second string to concatenate.
+ * @return char* the allocated string resultant of the concatenation.
+ */
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
