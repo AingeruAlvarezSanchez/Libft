@@ -56,7 +56,7 @@ SRC_BONUS = ft_lstnew.c			\
 			ft_lstmap.c			\
 
 SRC_EXT =	ft_checkext.c	\
-			ft_validfile.c	\
+			ft_checkfile.c	\
 
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
