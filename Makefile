@@ -55,8 +55,12 @@ SRC_BONUS = ft_lstnew.c			\
 			ft_lstiter.c		\
 			ft_lstmap.c			\
 
+SRC_EXT =	ft_checkext.c	\
+			ft_validfile.c	\
+
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
+OBJ_EXT = $(SRC_EXT:.c=.o)
 #############################################
 
 .SILENT:
@@ -75,12 +79,18 @@ bonus: $(OBJ_BONUS) $(INCLUDES)
 $(OBJ_BONUS): $(SRC) $(SRC_BONUS)
 	$(CC) $(CFLAGS) -c $^
 
+ext: $(OBJ_EXT) $(INCLUDES)
+	$(AR) $(NAME) $(OBJ_EXT)
+
+$(OBJ_EXT): $(SRC) $(SRC_EXT)
+	$(CC) $(CFLAGS) -c $^
+
 clean:
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	$(RM) $(OBJ) $(OBJ_BONUS) $(OBJ_EXT)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus .SILENT
+.PHONY: all clean fclean re bonus ext
