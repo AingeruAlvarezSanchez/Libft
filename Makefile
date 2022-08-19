@@ -73,16 +73,16 @@ $(NAME): $(OBJ) $(INCLUDES)
 $(OBJ): $(SRC) 
 	$(CC) $(CFLAGS) -c $^
 
-bonus: $(OBJ_BONUS) $(INCLUDES)
+bonus: $(OBJ_BONUS) $(OBJ) $(INCLUDES)
 	$(AR) $(NAME) $^
 
-$(OBJ_BONUS): $(SRC) $(SRC_BONUS)
+$(OBJ_BONUS): $(SRC_BONUS)
 	$(CC) $(CFLAGS) -c $^
 
-ext: $(OBJ_EXT) $(INCLUDES)
-	$(AR) $(NAME) $(OBJ_EXT)
+ext: $(OBJ_EXT) $(OBJ) $(INCLUDES)
+	$(AR) $(NAME) $^
 
-$(OBJ_EXT): $(SRC) $(SRC_EXT)
+$(OBJ_EXT): $(SRC_EXT)
 	$(CC) $(CFLAGS) -c $^
 
 clean:
