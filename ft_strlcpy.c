@@ -6,12 +6,21 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 22:11:44 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 23:30:25 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/19 22:13:26 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief copies up to dstsize - 1 bytes from the string pointed by src to
+ * the string pointed by dst.
+ * 
+ * @param dst the new string.
+ * @param src the string to be copied.
+ * @param dstsize the size of the destination string.
+ * @return size_t the size of the string to be copied.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

@@ -6,13 +6,22 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 03:37:17 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 19:17:31 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/19 22:19:28 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * @brief searches for the string pointed by set on the start and the end of
+ * the string pointed by s1 and returns an allocation of a new string without
+ * the set characters in the string s1.
+ * 
+ * @param s1 the string to be searched.
+ * @param set the string to search.
+ * @return char* the allocation result of the trimming.
+ */
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*result;

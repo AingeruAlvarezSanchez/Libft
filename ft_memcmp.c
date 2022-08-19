@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 00:48:16 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 20:01:41 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/19 22:09:40 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param s2 the second string to be compared.
  * @param n max bytes to be compared.
  * @return int the difference between the first differing
- * byte (or 0 if any byte differs)
+ * byte (or 0 if any byte differs).
  */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
