@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkfile.c                                     :+:      :+:    :+:   */
+/*   ft_getfile_size.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 23:34:19 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/21 18:17:45 by aalvarez         ###   ########.fr       */
+/*   Created: 2022/08/20 20:40:29 by aalvarez          #+#    #+#             */
+/*   Updated: 2022/08/21 18:19:41 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 #include <unistd.h>
 
 /**
- * @brief checks if the string pointed by file is a valid file descriptor.
+ * @brief checks the number of lines a valid file has, giving an invalid file
+ * descriptor to this function may result in undefined behaviour.
  * 
- * @param file the file to be checked.
- * @return int returns 1 if the file is invalid (non existing, no reading
- * permission, etc.) or 0 if file is valid to open and read.
+ * @param fd the file descriptor to evaluate.
+ * @return int the number of lines the content of the file descriptor has.
  */
-int	ft_checkfile(const char *file)
+int	ft_getfile_size(int fd)
 {
-	int	fd;
+	char	character;
+	int		size;
 
-	fd = open(file, O_RDONLY);
-	if (fd < 0)
+	size = 0;
+	while (read(fd, &character, 1))
 	{
-		close(fd);
-		return (1);
+		if (character == '\n')
+			size++;
 	}
-	close(fd);
-	return (0);
+	return (size);
 }
