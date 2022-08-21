@@ -58,6 +58,9 @@ SRC_BONUS = ft_lstnew.c			\
 SRC_EXT =	ft_checkext.c		\
 			ft_checkfile.c		\
 			ft_getfile_size.c	\
+			ft_doublestrdup.c	\
+			ft_doublefree.c		\
+			ft_doublestrlen.c	\
 
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
