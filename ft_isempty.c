@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_doublestrlen.c                                  :+:      :+:    :+:   */
+/*   ft_isempty.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 18:25:01 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/21 18:49:20 by aalvarez         ###   ########.fr       */
+/*   Created: 2022/08/21 21:02:27 by aalvarez          #+#    #+#             */
+/*   Updated: 2022/08/24 00:29:18 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief counts the number of lines the double pointer pointed by str has.
+ * @brief checks if the string pointed by str has at least onw character
+ * that differs from a space bar or its significants.
  * 
- * @param str the double pointer to count.
- * @return int the number of lines str has.
+ * @param str the string to be evaluated.
+ * @return int 1 if it finds a character differing from printable char, 0
+ * otherwise.
  */
-int	ft_doublestrlen(const char **str)
+int	ft_isempty(const char *str)
 {
-	int	i;
-
 	if (!str)
 		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (*str)
+	{
+		if (ft_isprint(*str))
+			return (1);
+		str++;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:01 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/21 18:31:24 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/21 21:02:55 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* Libft extended additional functions */
+int		ft_isempty(const char *str);
 int		ft_checkext(const char *str, const char *ext);
 int		ft_checkfile(const char *file);
 int		ft_getfile_size(int fd);

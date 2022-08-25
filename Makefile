@@ -55,7 +55,8 @@ SRC_BONUS = ft_lstnew.c			\
 			ft_lstiter.c		\
 			ft_lstmap.c			\
 
-SRC_EXT =	ft_checkext.c		\
+SRC_EXT =	ft_isempty.c		\
+			ft_checkext.c		\
 			ft_checkfile.c		\
 			ft_getfile_size.c	\
 			ft_doublestrdup.c	\
