@@ -26,7 +26,7 @@ int	ft_isempty(const char *str)
 		return (0);
 	while (*str)
 	{
-		if (ft_isprint(*str))
+		if (ft_isprint(*str) && *str != ' ')
 			return (1);
 		str++;
 	}
