@@ -59,6 +59,7 @@ SRC_EXT =	ft_isempty.c		\
 			ft_checkext.c		\
 			ft_checkfile.c		\
 			ft_getfile_size.c	\
+			ft_chr_in_set.c		\
 			ft_doublestrdup.c	\
 			ft_doublefree.c		\
 			ft_doublestrlen.c	\

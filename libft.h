@@ -6,7 +6,7 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:40:01 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/21 21:02:55 by aalvarez         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:01:19 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int		ft_isempty(const char *str);
 int		ft_checkext(const char *str, const char *ext);
 int		ft_checkfile(const char *file);
 int		ft_getfile_size(int fd);
+int		ft_chr_in_set(char c, const char *set);
 char	**ft_doublestrdup(const char **str);
 int		ft_doublestrlen(const char **str);
 int		ft_doublefree(char **str);
