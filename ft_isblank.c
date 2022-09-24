@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isempty.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 21:02:27 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/09/24 12:55:03 by bena             ###   ########.fr       */
+/*   Created: 2022/09/20 15:36:29 by becastro          #+#    #+#             */
+/*   Updated: 2022/09/24 12:46:01 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /**
- * @brief checks if the string pointed by str has at least onw character
- * that differs from a space bar or its significants.
- *
- * @param str the string to be evaluated.
- * @return int 1 if it finds a character differing from printable char, 0
- * otherwise.
+ * @brief
+ * Takes an unsigned char as string an returns (1) if is blank or (0) if is not
+ * @param c
+ * @return int
  */
-int	ft_strnotblank(const char *str)
+int	ft_isblank(unsigned char c)
 {
-	if (!str)
-		return (0);
-	while (*str)
-	{
-		if (ft_isprint(*str) && !ft_isblank(*str))
-			return (1);
-		str++;
-	}
+	if ((c == ' ' || c == '\t' || c == '\f'
+			|| c == '\r' || c == '\n' || c == '\v'))
+		return (1);
 	return (0);
 }
