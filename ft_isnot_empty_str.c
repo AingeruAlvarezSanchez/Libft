@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isempty.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 21:02:27 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/09/24 12:55:03 by bena             ###   ########.fr       */
+/*   Updated: 2022/09/24 13:38:22 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @return int 1 if it finds a character differing from printable char, 0
  * otherwise.
  */
-int	ft_strnotblank(const char *str)
+int	ft_isnot_empty_str(const char *str)
 {
 	if (!str)
 		return (0);
