@@ -56,6 +56,7 @@ SRC_BONUS = ft_lstnew.c			\
 			ft_lstmap.c			\
 
 SRC_EXT =	ft_isempty.c		\
+			ft_isblank.c		\
 			ft_checkext.c		\
 			ft_checkfile.c		\
 			ft_getfile_size.c	\
@@ -77,7 +78,7 @@ all: $(NAME)
 $(NAME): $(OBJ) $(INCLUDES)
 	$(AR) $(NAME) $(OBJ)
 
-$(OBJ): $(SRC) 
+$(OBJ): $(SRC)
 	$(CC) $(CFLAGS) -c $^
 
 bonus: $(OBJ_BONUS) $(OBJ) $(INCLUDES)
