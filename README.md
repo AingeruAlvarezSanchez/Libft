@@ -14,6 +14,7 @@ students have faced during this time.
   - [Basic malloc functions](#12-basic-malloc-functions)
       - [Malloc and it's use](#121-malloc-and-its-use)
   - [Additional Libft functions](#13-additional-libft-functions)
+  - [Bonus_part](#14-bonus-part)
 
 //////////////WIP TABLE OF CONTENT /////////////////////
 
@@ -45,13 +46,14 @@ and undefined behaviours.
 With this on mind, we can start coding the first part of the Libft project until
 we reach calloc, where we encounter our first malloc function.
 
-###1.2. Basic malloc functions 
+### 1.2. Basic malloc functions
 After finishing the first part, now we face two new functions.
+
 ![Libft_mandatory_builtins_malloc](.images/mandatory_builtins_malloc.png)
+
 For the purpose of creating this functions, we will now use the `malloc()`
 function, wich let us allocate memory for later use.
 - ### 1.2.1. Malloc and it's use
-
 C language has not the resources of some modern programming languages where you don't
 need to take care of memory allocation, in C, you need to reserve the memory your program
 is going to use and free it later. This is where the `malloc` function comes handy,
@@ -100,3 +102,33 @@ a 0 for limiting, that's because 0 it's a number, so you may have one in the mid
 iterate a number array, you must try to calculate how many loops you want to do.
 
 ### 1.3. Additional Libft functions 
+The second part asks you to create some functions wich are not mentioned in the bash manual, it gives you a basic
+description, the return values, and a bunch of other information necessary to create the functions.
+
+![Additional_libft_functions](.images/additional_libft_functions.png)
+
+It also gives you the hint that you can use already existent functions from the first part to complete this one.
+
+### 1.4. Bonus part
+
+The bonus part of the Libft introduces to us two new concepts, structures and linked lists.
+
+![!Bonus_part_structure](.images/bonus_part_structure.png)
+
+- ### 1.4.1. What is a structure
+
+A structure is a type of data in C that works as a container for elements, this way, we can group related data in the
+same place. For example.
+
+```
+struct  person
+{
+  char    *name;
+  int     age;
+  bool    is_married;
+  struct  *physical_appearance;
+};
+```
+
+In this particular case, the subject tells us that we are going to store a `void *content` and a pointer to another
+structure that has the same elements than this one (in fact, its the same type of structure).
