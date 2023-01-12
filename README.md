@@ -15,6 +15,8 @@ students have faced during this time.
       - [Malloc and it's use](#121-malloc-and-its-use)
   - [Additional Libft functions](#13-additional-libft-functions)
   - [Bonus_part](#14-bonus-part)
+      - [What structures are](#141-what-is-a-structure)
+      - [Some linked lists basic functions](#141-some-linked-lists-basic-functions)
 
 //////////////WIP TABLE OF CONTENT /////////////////////
 
@@ -28,7 +30,14 @@ programming language.
 ### 1.1. Some C language basic functions
 The first part asks you to recreate a set of basic C functions. 
 
-![Libft_mandatory_builtins](.images/mandatory_builtins_no_malloc.png)
+| [isalpha](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_isalpha.c) | [bzero](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_bzero.c)     | [strchr](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strchr.c)   |
+|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [isdigit](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_isdigit.c) | [memcpy](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_memcpy.c)   | [strrchr](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strrchr.c) |
+| [isalnum](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_isalnum.c) | [memmove](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_memmove.c) | [strncmp](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strncmp.c) |
+| [isascii](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_isascii.c) | [strlcpy](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strlcpy.c) | [memchr](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_memchr.c)   |
+| [isprint](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_isprint.c) | [strlcat](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strlcat.c) | [memcmp](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_memcmp.c)   |
+| [strlen](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strlen.c)   | [toupper](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_toupper.c) | [strnstr](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strnstr.c) |
+| [memset](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_memset.c)   | [tolower](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_tolower.c) | [atoi](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_atoi.c)       |
 
 you can check up how any of this functions work using the bash
 `man` command, for example, if we type `man isalpha` on the terminal,
@@ -37,7 +46,7 @@ it will then open a manual page that displays the following information:
 ![bash_manual_example](.images/bash_manual_example.png)
 
 As we can see, there are three key concepts on the manual pages:
-1. **SYNOPSIS**: This little section tells us how we should declare the
+1. **SYNOPSIS**: This section tells us how we should declare the
 function and what parameters it should receive and return.
 2. **DESCRIPTION**: A basic description of what the function does.
 3. **RETURN VALUES**: The value the function will return, including error control 
@@ -49,7 +58,8 @@ we reach calloc, where we encounter our first malloc function.
 ### 1.2. Basic malloc functions
 After finishing the first part, now we face two new functions.
 
-![Libft_mandatory_builtins_malloc](.images/mandatory_builtins_malloc.png)
+| [calloc](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_calloc.c) | [strdup](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strdup.c) |
+|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
 
 For the purpose of creating this functions, we will now use the `malloc()`
 function, wich let us allocate memory for later use.
@@ -105,7 +115,12 @@ iterate a number array, you must try to calculate how many loops you want to do.
 The second part asks you to create some functions wich are not mentioned in the bash manual, it gives you a basic
 description, the return values, and a bunch of other information necessary to create the functions.
 
-![Additional_libft_functions](.images/additional_libft_functions.png)
+| [substr](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_substr.c)   | [strmapi](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strmapi.c)       | [putnbr_fd](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_putnbr_fd.c) |
+|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| [strjoin](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strjoin.c) | [striteri](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_striteri.c)     |                                                                                                 |
+| [strtrim](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_strtrim.c) | [putchar_fd](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_putchar_fd.c) |                                                                                                 |
+| [split](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_split.c)     | [putstr_fd](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_putstr_fd.c)   |                                                                                                 |
+| [itoa](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_itoa.c)       | [putendl_fd](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_putendl_fd.c) |                                                                                                 |
 
 It also gives you the hint that you can use already existent functions from the first part to complete this one.
 
@@ -132,3 +147,13 @@ struct  person
 
 In this particular case, the subject tells us that we are going to store a `void *content` and a pointer to another
 structure that has the same elements than this one (in fact, its the same type of structure).
+
+- ### 1.4.2. Some linked lists basic functions
+
+  The bonus part functions of the project aim to make you understand the basic linked-lists usages and concepts, here is
+  a list of all the functions from the bous part.
+
+| [lstnew](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstnew.c)             | [lstlast](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstlast.c)         | [lstclear](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstclear.c) |
+|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [lstadd_front](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstadd_front.c) | [lstadd_back](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstadd_back.c) | [lstiter](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstiter.c)   |
+| [lstsize](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstsize.c)           | [lstdelone](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstdelone.c)     | [lstmap](https://github.com/AingeruAlvarezSanchez/Libft_extended/blob/master/ft_lstmap.c)     |
