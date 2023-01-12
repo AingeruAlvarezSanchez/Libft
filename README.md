@@ -16,7 +16,7 @@ students have faced during this time.
   - [Additional Libft functions](#13-additional-libft-functions)
   - [Bonus_part](#14-bonus-part)
       - [What structures are](#141-what-is-a-structure)
-      - [Some linked lists basic functions](#141-some-linked-lists-basic-functions)
+      - [Some linked lists basic functions](#142-some-linked-lists-basic-functions)
 
 //////////////WIP TABLE OF CONTENT /////////////////////
 
