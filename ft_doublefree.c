@@ -17,15 +17,14 @@
  * @brief attempts to free a double pointer pointed by str.
  * 
  * @param str the double pointer to free.
- * @return int 1 if the function couldn't free the string or 0 if it sucesfully
- * freed it.
+ * @return NULL.
  */
-int	ft_doublefree(char **str)
+char	**ft_doublefree(char **str)
 {
 	int	i;
 
-	if (!str)
-		return (1);
+	if (str == NULL)
+		return (str);
 	i = -1;
 	while (str[++i])
 		free(str[i]);

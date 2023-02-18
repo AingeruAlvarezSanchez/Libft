@@ -80,7 +80,7 @@ int		ft_getfile_size(int fd);
 int		ft_chr_in_set(char c, const char *set);
 char	**ft_doublestrdup(const char **str);
 int		ft_doublestrlen(const char **str);
-int		ft_doublefree(char **str);
+char	**ft_doublefree(char **str);
 int		ft_strcmp(char *s1, char *s2);
 
 #endif
