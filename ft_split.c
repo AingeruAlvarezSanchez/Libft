@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /**
  * @brief calculates the size of the double string for allocation.
@@ -35,6 +34,35 @@ static int	ft_doublesize(const char *s, char c)
 	return (size);
 }
 
+static char	**ft_copy_words(char const *s, char c, char	**result)
+{
+	size_t	i;
+	int		j;
+	int		start;
+
+	start = -1;
+	i = -1;
+	j = 0;
+	while (++i <= ft_strlen(s))
+	{
+		if (s[i] != c && start < 0)
+			start = i;
+		else if (start >= 0 && (s[i] == c || i == ft_strlen(s)))
+		{
+			result[j++] = ft_substr(s, start, (i - start));
+			if (result[j - 1] == NULL)
+			{
+				ft_doublefree(result);
+				errno = ENOMEM;
+				return (NULL);
+			}
+			start = -1;
+		}
+	}
+	result[j] = NULL;
+	return (result);
+}
+
 /**
  * @brief takes the string pointed by s and creates a double
  * array splitted by the character c (wich is eliminated).
@@ -47,28 +75,11 @@ static int	ft_doublesize(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	size_t	i;
-	int		j;
-	int		start;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (ft_doublesize(s, c) + 1));
-	if (!result)
+	if (result == NULL)
 		return (NULL);
-	start = -1;
-	i = -1;
-	j = 0;
-	while (++i <= ft_strlen(s))
-	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if (start >= 0 && (s[i] == c || i == ft_strlen(s)))
-		{
-			result[j++] = ft_substr(s, start, (i - start));
-			start = -1;
-		}
-	}
-	result[j] = NULL;
-	return (result);
+	return (ft_copy_words(s, c, result));
 }
