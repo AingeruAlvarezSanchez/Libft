@@ -30,5 +30,5 @@ int	ft_doublefree(char **str)
 	while (str[++i])
 		free(str[i]);
 	free(str);
-	return (0);
+	return (NULL);
 }
