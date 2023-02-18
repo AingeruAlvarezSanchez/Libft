@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <errno.h>
 
 /**
  * @brief attempts to duplicate the double pointer pointed by str to a new

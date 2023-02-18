@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
-#include <unistd.h>
 
 /**
  * @brief checks if the string pointed by file is a valid file descriptor.
