@@ -56,7 +56,7 @@ SRC_BONUS = ft_lstnew.c			\
 			ft_lstmap.c			\
 
 SRC_EXT =	ft_isnot_empty_str.c\
-			ft_isblank.c		\
+			ft_isspace.c		\
 			ft_checkext.c		\
 			ft_checkfile.c		\
 			ft_getfile_size.c	\

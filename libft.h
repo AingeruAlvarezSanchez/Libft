@@ -73,7 +73,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* Libft extended additional functions */
 int		ft_isnot_empty_str(const char *str);
-int		ft_isblank(unsigned char c);
+int		ft_isspace(unsigned char c);
 int		ft_checkext(const char *str, const char *ext);
 int		ft_checkfile(const char *file);
 int		ft_getfile_size(int fd);
