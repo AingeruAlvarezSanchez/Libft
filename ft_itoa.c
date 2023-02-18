@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 
 	size = ft_arrsize(n);
 	nbr = n;
-	result = malloc(sizeof(char) * (size + 1));
+	result = (char *) malloc(sizeof(char) * (size + 1));
 	if (!result)
 		return (NULL);
 	if (nbr < 0)

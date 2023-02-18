@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /**
  * @brief searches for the string pointed by set on the start and the end of

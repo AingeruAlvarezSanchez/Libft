@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /**
  * @brief iterates the list pointed to by lst and applies the function

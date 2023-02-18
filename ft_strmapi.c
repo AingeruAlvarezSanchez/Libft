@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /**
  * @brief iterates over the string pointed by s and creates a new string result

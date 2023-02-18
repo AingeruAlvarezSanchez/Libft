@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isblank.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -18,7 +18,7 @@
  * @param c
  * @return int
  */
-int	ft_isblank(unsigned char c)
+int	ft_isspace(unsigned char c)
 {
 	if ((c == ' ' || c == '\t' || c == '\f'
 			|| c == '\r' || c == '\n' || c == '\v'))

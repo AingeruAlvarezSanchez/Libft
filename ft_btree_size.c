@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_btree_size.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josesanc <josesanc@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 18:55:34 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 20:04:57 by aalvarez         ###   ########.fr       */
+/*   Created: 2023/02/18 19:40:18 by josesanc          #+#    #+#             */
+/*   Updated: 2023/02/18 19:40:18 by josesanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief writes a string on a fd.
+ * @brief Returns the size of nodes at the tree
  * 
- * @param c string to write.
- * @param fd fd to be written.
+ * @param root 
+ * @return int 
  */
-void	ft_putstr_fd(char *s, int fd)
+int	ft_btree_size(t_btree *root)
 {
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	if (root == NULL)
+		return (0);
+	else
+		return (1 + ft_btree_size(root->left) + ft_btree_size(root->right));
 }

@@ -21,6 +21,13 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+typedef struct s_btree
+{
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}	t_btree;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -69,14 +76,28 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* Libft extended additional functions */
 int		ft_isnot_empty_str(const char *str);
-int		ft_isblank(unsigned char c);
+int		ft_isspace(unsigned char c);
 int		ft_checkext(const char *str, const char *ext);
 int		ft_checkfile(const char *file);
 int		ft_getfile_size(int fd);
 int		ft_chr_in_set(char c, const char *set);
 char	**ft_doublestrdup(const char **str);
 int		ft_doublestrlen(const char **str);
-int		ft_doublefree(char **str);
+char	**ft_doublefree(char **str);
 int		ft_strcmp(char *s1, char *s2);
+
+/* Binary trees */
+t_btree	*btree_create_node(void *item);
+int		ft_btree_size(t_btree *root);
+int		ft_btree_level_count(t_btree *root);
+
+void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+
+void	ft_btree_insert_data(t_btree **root,
+			t_btree *new_node, int (*cmpf)(void *, void *));
+void	*ft_btree_search_item(t_btree *root,
+			void *data_ref, int (*cmpf)(void *, void *));
 
 #endif

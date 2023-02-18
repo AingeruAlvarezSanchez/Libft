@@ -26,7 +26,7 @@ int	ft_isnot_empty_str(const char *str)
 		return (0);
 	while (*str)
 	{
-		if (ft_isprint(*str) && !ft_isblank(*str))
+		if (ft_isprint(*str) && !ft_isspace(*str))
 			return (1);
 		str++;
 	}
