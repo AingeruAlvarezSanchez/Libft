@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <errno.h>
 
 /**
  * @brief calculates the size of the double string for allocation.

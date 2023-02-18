@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 /**
  * @brief writes a string on a fd and a closing endline.

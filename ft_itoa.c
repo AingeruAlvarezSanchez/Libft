@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /**
  * @brief calculates the size of the allocation
@@ -51,7 +52,7 @@ char	*ft_itoa(int n)
 
 	size = ft_arrsize(n);
 	nbr = n;
-	result = malloc(sizeof(char) * (size + 1));
+	result = (char *) malloc(sizeof(char) * (size + 1));
 	if (!result)
 		return (NULL);
 	if (nbr < 0)

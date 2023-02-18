@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 /**
  * @brief checks the number of lines a valid file has, giving an invalid file
