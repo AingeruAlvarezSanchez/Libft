@@ -25,10 +25,7 @@ int	ft_checkfile(const char *file)
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
-	{
-		close(fd);
 		return (1);
-	}
 	close(fd);
 	return (0);
 }
