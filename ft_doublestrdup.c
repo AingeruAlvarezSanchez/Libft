@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <stdlib.h>
+#include <errno.h>
 
 /**
  * @brief attempts to duplicate the double pointer pointed by str to a new
@@ -33,7 +34,15 @@ char	**ft_doublestrdup(const char **str)
 		return (NULL);
 	i = -1;
 	while (str[++i])
+	{
 		result[i] = ft_strdup(str[i]);
+		if (result[i] == NULL)
+		{
+			ft_doublefree(result);
+			errno = ENOMEM;
+			return (NULL);
+		}
+	}
 	result[i] = 0;
 	return (result);
 }
