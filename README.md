@@ -64,7 +64,7 @@ After finishing the first part, now we face two new functions.
 For the purpose of creating this functions, we will now use the `malloc()`
 function, wich let us allocate memory for later use.
 - ### 1.2.1. Malloc and it's use
-C language has not the resources of some modern programming languages where you don't
+C language hasn't got the resources of some modern programming languages where you don't
 need to take care of memory allocation, in C, you need to reserve the memory your program
 is going to use and free it later. This is where the `malloc` function comes handy,
 this function allocates the number of bytes you tell him for your program to use, for example,
