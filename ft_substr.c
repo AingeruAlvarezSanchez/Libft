@@ -6,11 +6,12 @@
 /*   By: aalvarez <aalvarez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 01:43:23 by aalvarez          #+#    #+#             */
-/*   Updated: 2022/08/17 20:28:41 by aalvarez         ###   ########.fr       */
+/*   Updated: 2024/01/05 11:56:33 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /**
  * @brief takes a string and allocates a new string composed of len bytes from

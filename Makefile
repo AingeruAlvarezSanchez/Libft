@@ -65,6 +65,7 @@ SRC_EXT =	ft_isnot_empty_str.c		\
 			ft_doublefree.c				\
 			ft_doublestrlen.c			\
 			ft_strcmp.c					\
+			ft_ulltoa_base.c			\
 			ft_btree_apply_infix.c		\
 			ft_btree_apply_prefix.c		\
 			ft_btree_apply_suffix.c		\
