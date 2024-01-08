@@ -23,20 +23,21 @@ char	*ft_ulltoa_base(unsigned long long n, int base)
 	tmp = n;
 	len = 0;
 	lookup = "0123456789abcdefghijklmnopqrstuvwxyz";
+	if (n == 0)
+		return (ft_strdup("0"));
 	while (tmp != 0)
 	{
-		tmp /= (unsigned long)base;
+		tmp /= (unsigned long) base;
 		++len;
 	}
-	result = (char *)malloc(sizeof(char) * (len + 2));
+	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
-	result[len + 1] = '\0';
-	while (len >= 0)
+	result[len] = '\0';
+	while (--len >= 0)
 	{
 		result[len] = lookup[n % base];
 		n /= base;
-		len--;
 	}
 	return (result);
 }
