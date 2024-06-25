@@ -44,4 +44,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s);
 
+// malloc family functions.
+void	*ft_calloc(size_t nmemb, size_t size);
+
 #endif //LIBFT_H
