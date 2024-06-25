@@ -25,6 +25,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_atoi(const char *nptr);
+char	*ft_itoa(int n);
 
 // mem_something family functions.
 void	*ft_memset(void *s, int c, size_t n);
