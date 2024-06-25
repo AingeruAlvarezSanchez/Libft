@@ -52,5 +52,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 // malloc family functions.
 void	*ft_calloc(size_t nmemb, size_t size);
+char	**ft_split(char const *s, char c);
 
 #endif //LIBFT_H
