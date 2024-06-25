@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalvarez <aalvarez@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/19 12:54:27 by aalvarez          #+#    #+#             */
-/*   Updated: 2024/06/26 00:57:12 by aalvarez         ###   ########.fr       */
+/*   Created: 2024/06/19 13:16:57 by aalvarez          #+#    #+#             */
+/*   Updated: 2024/06/20 17:39:15 by aalvarez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// is_something family functions.
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-// to_something family functions.
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-int		ft_atoi(const char *nptr);
-
-#endif //LIBFT_H
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
