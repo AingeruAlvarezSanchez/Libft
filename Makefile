@@ -36,20 +36,33 @@ STR_SOMETHING_SRC = ft_strlen.c   \
                     ft_striteri.c \
 
 PUT_SOMETHING_SRC = ft_putchar_fd.c \
-					ft_putstr_fd.c  \
-					ft_putendl_fd.c \
-					ft_putnbr_fd.c  \
+                    ft_putstr_fd.c  \
+                    ft_putendl_fd.c \
+                    ft_putnbr_fd.c  \
 
 MALLOC_FUNCS_SRC = ft_calloc.c     \
                    ft_split.c      \
 
+LST_SOMETHING_SRC = ft_lstnew.c       \
+                    ft_lstadd_front.c \
+                    ft_lstsize.c      \
+                    ft_lstlast.c      \
+                    ft_lstadd_back.c  \
+                    ft_lstdelone.c    \
+                    ft_lstclear.c     \
+                    ft_lstiter.c      \
+                    ft_lstmap.c       \
 
-SRC = $(IS_SOMETHING_SRC)  \
-      $(TO_SOMETHING_SRC)  \
-      $(MEM_SOMETHING_SRC) \
-      $(STR_SOMETHING_SRC) \
-      $(PUT_SOMETHING_SRC) \
-      $(MALLOC_FUNCS_SRC)  \
+SRC = $(IS_SOMETHING_SRC)                                          \
+      $(TO_SOMETHING_SRC)                                          \
+      $(MEM_SOMETHING_SRC)                                         \
+      $(STR_SOMETHING_SRC)                                         \
+      $(PUT_SOMETHING_SRC)                                         \
+      $(MALLOC_FUNCS_SRC)                                          \
+      $(if                                                         \
+            $(filter $(MAKECMDGOALS), bonus),                      \
+            $(LST_SOMETHING_SRC)                                   \
+      )                                                            \
 
 OBJ = $(patsubst %.c, obj/%.o, $(SRC))
 
@@ -73,3 +86,6 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
+
+.PHONY: bonus
+bonus: all
