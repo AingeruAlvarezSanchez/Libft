@@ -53,6 +53,8 @@ LST_SOMETHING_SRC = ft_lstnew.c       \
                     ft_lstiter.c      \
                     ft_lstmap.c       \
 
+FLAGS_MANAGE_SRC = flags.c \
+
 SRC = $(IS_SOMETHING_SRC)                                          \
       $(TO_SOMETHING_SRC)                                          \
       $(MEM_SOMETHING_SRC)                                         \
@@ -60,9 +62,16 @@ SRC = $(IS_SOMETHING_SRC)                                          \
       $(PUT_SOMETHING_SRC)                                         \
       $(MALLOC_FUNCS_SRC)                                          \
       $(if                                                         \
-            $(filter $(MAKECMDGOALS), bonus),                      \
+            $(or                                                   \
+                  $(filter $(MAKECMDGOALS), bonus),                \
+                  $(filter $(MAKECMDGOALS), ext)                   \
+            ),                                                     \
             $(LST_SOMETHING_SRC)                                   \
       )                                                            \
+      $(if                                                         \
+			$(filter $(MAKECMDGOALS), ext),                        \
+			$(FLAGS_MANAGE_SRC)                                    \
+	  )                                                            \
 
 OBJ = $(patsubst %.c, obj/%.o, $(SRC))
 
@@ -89,3 +98,6 @@ re: fclean all
 
 .PHONY: bonus
 bonus: all
+
+.PHONY: ext
+ext: all
